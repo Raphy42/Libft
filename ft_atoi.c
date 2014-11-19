@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 14:23:17 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:07:35 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/11/19 18:18:32 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static char				*skip_spaces(char *str)
 	return (str);
 }
 
-static int				char_to_int(const char *str)
+static t_ull			char_to_int(const char *str, int *neg)
 {
-	int					i;
+	t_ull				i;
 
 	i = 0;
 	while (*str && ft_isdigit((int)*str))
@@ -29,7 +29,22 @@ static int				char_to_int(const char *str)
 		i = i * 10 + *str - '0';
 		str++;
 	}
-	return (i);
+	if (i == (t_ull)INT_MAX)
+		return (INT_MAX);
+	else if (i > (t_ull)INT_MAX + 1 && i < (t_ull)LONG_MAX && *neg == -1)
+	{
+		*neg = 1;
+		return (LONG_MAX - i + 1);
+	}
+	else if (i > (t_ull)INT_MAX + 1 && i < (t_ull)LONG_MAX)
+		return (LONG_MAX - i - 3);
+	else if (i > (t_ull)LONG_MAX)
+	{
+		*neg = *neg == -1 ? 0 : 1;
+		return (-1);
+	}
+	else
+		return (i);
 }
 
 int						ft_atoi(const char *str)
@@ -38,6 +53,8 @@ int						ft_atoi(const char *str)
 
 	negative = 1;
 	str = skip_spaces((char *)str);
+	while (*str == '0')
+		str++;
 	if (*str == '-')
 	{
 		negative = -1;
@@ -45,5 +62,5 @@ int						ft_atoi(const char *str)
 	}
 	else if (*str == '+')
 		str++;
-	return (char_to_int(str) * negative);
+	return ((int)char_to_int(str, &negative) * negative);
 }

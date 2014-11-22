@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 13:16:08 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:08:41 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/11/19 19:02:44 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 		n--;
 	}
-	if (s1[i] - s2[i] < 0)
+	if ((unsigned char)s1[i] - (unsigned char)s2[i] < 0)
 		return (-1);
-	if (s1[i] - s2[i] > 0)
+	if ((unsigned char)s1[i] - (unsigned char)s2[i] > 0)
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lcozzoli <lcozzoli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 19:30:29 by darresti          #+#    #+#             */
-/*   Updated: 2014/11/17 14:03:23 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/11/17 17:31:53 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -899,7 +899,7 @@ static void	test_strjoin(void)
 	print_test_results(test, ctrl, 8, warning);
 }
 
-static void	test_strlcat(void)
+/*static void	test_strlcat(void)
 {
 	size_t	n;
 	int		test[4], ctrl[4];
@@ -938,7 +938,7 @@ static void	test_strlcat(void)
 	free(dst1);
 	free(dst2);
 	print_test_results(test, ctrl, 4, NULL);
-}
+}*/
 
 static void	test_strlen(void)
 {
@@ -1240,6 +1240,35 @@ static void	test_strrchr(void)
 	print_test_results(test, ctrl, 3, NULL);
 }
 
+static void	test_strsplit(void)
+{
+int		test[3], ctrl[3];
+ 	char	**tab; 
+
+ 	print_test_name("strsplit"); 
+ 	init(ctrl, 3, 0); 
+ #ifdef SEGFAULT_ME 
+ 	fflush(stdout); 
+ 	test[2] = 1; 
+	tab = ft_strsplit(NULL, '*'); 
+ 	if (!tab) 
+ 		test[2] = 0; 
+ #endif 
+ 	tab = ft_strsplit("test", '*'); 
+ 	test[0] = strcmp("test", tab[0]);
+ 	test[1] = 1; 
+ 	if (!tab[1]) 
+ 		test[1] = 0; 
+ 	//free_tab(tab); 
+	//tab = ft_strsplit(" test", ' '); 
+	//test[2] = strcmp("test", tab); 
+	//free_tab(tab); 
+ #ifdef SEGFAULT_ME 
+ 	print_test_results_summary(test, ctrl, 3); 
+ #else 
+ 	print_test_results_summary(test, ctrl, 2); 
+ #endif	 
+ }
 
 static void	test_strstr(void)
 {
@@ -1434,7 +1463,7 @@ int			main(void)
 	test_striter();
 	test_striteri();
 	test_strjoin();
-	test_strlcat();
+//	test_strlcat();
 	test_strlen();
 	test_strmap();
 	test_strmapi();
@@ -1445,7 +1474,7 @@ int			main(void)
 	test_strnew();
 	test_strnstr();
 	test_strrchr();
-//	test_strsplit();
+	test_strsplit();
 	test_strstr();
 	test_strsub();
 	test_strtrim();

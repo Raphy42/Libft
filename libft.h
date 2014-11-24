@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/22 16:16:21 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/11/24 21:56:19 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
 typedef unsigned long long t_ull;
+
 # define		INT_MAX		2147483647
 # define		LONG_MAX	9223372036854775807
 

@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 12:01:21 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/19 18:32:12 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/12/17 17:56:23 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ char			*ft_strcpy(char *dst, const char *src)
 	char		*s;
 
 	s = dst;
-
-	if (dst)	
+	if (dst)
 		while ((*s++ = *src++) != 0)
-				;
+			;
 	return (dst);
 }

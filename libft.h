@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/24 21:56:19 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/12/17 17:57:06 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ typedef struct	s_list
 
 typedef unsigned long long t_ull;
 
-# define		INT_MAX		2147483647
-# define		LONG_MAX	9223372036854775807
+# define INT_MAX	2147483647
+# define LONG_MAX	9223372036854775807
 
 /*
 ** 	Vanilla functions

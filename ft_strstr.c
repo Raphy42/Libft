@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 13:15:21 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:08:46 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/12/17 17:53:38 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strstr(const char *s1, const char *s2)
 		return (str);
 	while (*str)
 	{
-		if (strncmp(str, s2, len) == 0)
+		if (ft_strncmp(str, s2, len) == 0)
 			return (str);
 		str++;
 	}

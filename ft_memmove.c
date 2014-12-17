@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 18:17:13 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/24 21:11:13 by rdantzer         ###   ########.fr       */
+/*   Updated: 2014/12/17 17:55:41 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len)
 	s1 = dst;
 	s2 = src;
 	if (len == 0)
-		return ((void *) 0);
+		return ((void *)0);
 	if (s1 < s2)
 		return (ft_memcpy(s1, s2, len));
 	s1 += len;

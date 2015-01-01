@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 10:49:40 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:08:19 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 22:47:57 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void			ft_strclr(char *s)
 {
-	if (s)
+	if (s != NULL)
 		ft_memset(s, 0, ft_strlen(s));
 }

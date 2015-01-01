@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 17:53:34 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:08:43 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 23:18:44 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 char			*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size + 1));
+	char		*p;
+
+	p = (char *)ft_memalloc(size + 1);
+	if (p == NULL)
+		return (NULL);
+	else
+		return (p);
 }

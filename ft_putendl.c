@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 14:04:34 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:08:01 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 22:38:05 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void			ft_putendl(char const *s)
 {
-	ft_putstr(s);
+	if (s != NULL)
+		ft_putstr(s);
 	ft_putchar('\n');
 }

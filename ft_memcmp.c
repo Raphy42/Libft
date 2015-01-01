@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 19:44:12 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:07:53 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 23:37:24 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n)
 	if (buf1 && buf2)
 	{
 		while (i < n && buf1[i] == buf2[i])
-		{
 			++i;
-		}
 		if (i == n)
 			return (0);
 		else

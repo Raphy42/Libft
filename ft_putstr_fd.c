@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 17:36:06 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:08:16 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 22:46:56 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void			ft_putstr_fd(char const *s, int fd)
 {
-	if (*s)
-	{
-		write(fd, s, 1);
-		ft_putstr_fd(s + 1, fd);
-	}
+	if (s != NULL)
+		write(fd, s, ft_strlen(s));
 }

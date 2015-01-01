@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 14:14:28 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/24 22:02:31 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 22:45:34 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void			ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	char		*tmp;
+
+	tmp = ft_itoa(n);
+	if (tmp != NULL)
+	{
+		ft_putstr_fd(tmp, fd);
+		free(tmp);
+	}
 }

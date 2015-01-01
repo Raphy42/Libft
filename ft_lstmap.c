@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/09 18:17:13 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/01 22:37:05 by rdantzer         ###   ########.fr       */
+/*   Created: 2015/01/02 00:13:28 by rdantzer          #+#    #+#             */
+/*   Updated: 2015/01/02 00:29:24 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memmove(void *dst, const void *src, size_t len)
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char		*s1;
-	const char	*s2;
+	t_list *map;
+	t_list *add;
+	t_list *tmp;
 
-	s1 = dst;
-	s2 = src;
-	if (len == 0)
-		return ((void *)0);
-	if (s1 < s2)
-		return (ft_memcpy(s1, s2, len));
-	s1 += len;
-	s2 += len;
-	while (len--)
-		*--s1 = *--s2;
-	return (dst);
+	if (lst == NULL || f == NULL)
+		return (NULL);
+	map = f(lst);
+	tmp = map;
+	lst = lst->next;
+	while (lst != NULL)
+	{
+		add = f(lst);
+		if (add == NULL)
+			return (NULL);
+		tmp->next = add;
+		tmp = add;
+		lst = lst->next;
+	}
+	return (map);
 }

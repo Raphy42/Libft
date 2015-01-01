@@ -6,13 +6,13 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 14:40:11 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/12 16:07:54 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/01 22:36:57 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void			*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*tmp;
 	const char	*src2;

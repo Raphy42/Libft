@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 01:33:25 by rdantzer          #+#    #+#             */
-/*   Updated: 2014/11/11 14:47:20 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/02 01:07:19 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	char			*p;
 	unsigned int	i;
 
+	p = NULL;
 	i = 0;
 	if (s != NULL && f != NULL)
 	{

@@ -6,15 +6,15 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/02 03:19:30 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/02 05:40:34 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/05 23:55:17 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t					ft_nbrlen(t_ull nbr)
+size_t			ft_nbrlen(t_ull nbr)
 {
-	register size_t		i;
+	size_t		i;
 
 	i = 0;
 	if (nbr == 0)

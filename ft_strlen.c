@@ -6,15 +6,15 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 13:57:51 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/05 23:54:19 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/17 09:03:47 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlen(const char *s)
+size_t					ft_strlen(const char *s)
 {
-	const char	*p;
+	register const char	*p;
 
 	if (s == NULL)
 		return (0);

@@ -6,7 +6,7 @@
 #    By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:45:12 by rdantzer          #+#    #+#              #
-#    Updated: 2015/01/04 00:08:05 by rdantzer         ###   ########.fr        #
+#    Updated: 2015/01/17 09:03:01 by rdantzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC= ft_strlen.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
 	 ft_strmapi.c ft_strequ.c ft_strsub.c ft_strlcat.c ft_memmove.c ft_strnequ.c \
 	 ft_strtrim.c ft_strsplit.c \
 	 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstmap.c ft_lstiter.c \
-	 ft_nbrlen.c
+	 ft_nbrlen.c ft_putlnbr.c
 
 ## Outputs
 OBJ= $(SRC:.c=.o)
@@ -34,7 +34,7 @@ CC= gcc
 AR= ar
 
 ## Options
-CFLAGS= -Wall -Werror -Wextra
+CFLAGS= -Wall -Werror -Wextra -fdiagnostics-color=always -O3
 
 ## Aesthetics
 RED= \033[31m

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   ft_putlnbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/02 03:19:30 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/09 13:27:28 by rdantzer         ###   ########.fr       */
+/*   Created: 2015/01/09 13:24:17 by rdantzer          #+#    #+#             */
+/*   Updated: 2015/01/09 13:25:04 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-size_t			ft_nbrlen(long long int nbr)
+void	ft_putlnbr(long long int n)
 {
-	size_t		i;
-
-	i = 0;
-	if (nbr == 0)
-		return (1);
-	while (nbr != 0)
+	if (n < 0)
 	{
-		nbr /= 10;
-		i++;
+		ft_putchar('-');
+		n = -n;
 	}
-	return (i);
+	if (n >= 10)
+	{
+		ft_putlnbr(n / 10);
+		ft_putlnbr(n % 10);
+	}
+	else
+		ft_putchar(n + 48);
 }

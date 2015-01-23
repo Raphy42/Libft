@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/09 13:28:16 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/23 15:18:25 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 **		Bonus functions
 */
-size_t			ft_nbrlen(long long int n);
-void			ft_putlnbr(long long int n);
+void			ft_strrev(char *str);
 
 #endif

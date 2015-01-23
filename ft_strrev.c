@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/02 03:19:30 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/09 13:27:28 by rdantzer         ###   ########.fr       */
+/*   Created: 2015/01/23 14:59:49 by rdantzer          #+#    #+#             */
+/*   Updated: 2015/01/23 16:55:39 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_nbrlen(long long int nbr)
+void		ft_strrev(char *str)
 {
-	size_t		i;
+	size_t	i;
+	size_t	j;
+	char	c;
 
 	i = 0;
-	if (nbr == 0)
-		return (1);
-	while (nbr != 0)
+	j = ft_strlen(str) - 1;
+	if (str == NULL)
+		return ;
+	while (i < j)
 	{
-		nbr /= 10;
+		c = str[i];
+		str[i] = str[j];
+		str[j] = c;
 		i++;
+		j--;
 	}
-	return (i);
 }

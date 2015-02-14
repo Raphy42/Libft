@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/23 15:18:25 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/01/29 13:35:05 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,16 +91,20 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 /*
 **		List functions
 */
-t_list			*ft_lstnew(void const *content, size_t content_size);
-void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstadd(t_list **alst, t_list *add);
-void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list			*ft_lstnew(void const *content, size_t content_size);
+void			ft_lstadd(t_list **alst, t_list *add);
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 /*
 **		Bonus functions
 */
+int				ft_strcasecmp(const char *s1, const char *s2);
+int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
+void			ft_strlower(char *str);
 void			ft_strrev(char *str);
+void			ft_strupper(char *str);
 
 #endif

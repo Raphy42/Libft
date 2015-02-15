@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/29 13:35:05 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/02/15 09:22:12 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef unsigned long long t_ull;
 
 # define INT_MAX	2147483647
 # define LONG_MAX	9223372036854775807
+# define BASE		0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 /*
 ** 	Vanilla functions
@@ -101,8 +102,13 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 /*
 **		Bonus functions
 */
+double			ft_atod(const char *str);
+unsigned long	ft_atol(const char *str);
+int				ft_arraylen(char **array);
+unsigned long	ft_basetol(const char *str, int base);
 int				ft_strcasecmp(const char *s1, const char *s2);
 int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
+void			ft_arraydel(char **array);
 void			ft_strlower(char *str);
 void			ft_strrev(char *str);
 void			ft_strupper(char *str);

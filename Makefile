@@ -6,7 +6,7 @@
 #    By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:45:12 by rdantzer          #+#    #+#              #
-#    Updated: 2015/01/29 13:15:50 by rdantzer         ###   ########.fr        #
+#    Updated: 2015/02/15 09:17:30 by rdantzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC= ft_strlen.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
 	 ft_strmapi.c ft_strequ.c ft_strsub.c ft_strlcat.c ft_memmove.c ft_strnequ.c \
 	 ft_strtrim.c ft_strsplit.c \
 	 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstmap.c ft_lstiter.c \
-	 ft_strrev.c ft_strupper.c ft_strlower.c ft_strcasecmp.c ft_strncasecmp.c
+	 ft_strrev.c ft_strupper.c ft_strlower.c ft_strcasecmp.c ft_strncasecmp.c\
+	 ft_arraydel.c ft_arraylen.c ft_atod.c ft_atol.c
 
 ## Outputs
 OBJ= $(SRC:.c=.o)

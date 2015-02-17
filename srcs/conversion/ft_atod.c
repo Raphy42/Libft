@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/15 09:05:45 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/02/15 09:17:15 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/02/16 21:32:51 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ double			ft_atod(const char *str)
 
 	while (ft_isspace(*str))
 		str++;
+	part = 0.0;
 	sign = (*str == '-') ? -1.0 : 1.0;
 	str = (*str == '-' || *str == '+') ? str + 1 : str;
 	nb = 0.0;

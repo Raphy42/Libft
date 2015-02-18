@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   ft_basetol.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/15 09:15:15 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/02/16 21:33:48 by rdantzer         ###   ########.fr       */
+/*   Created: 2015/02/18 12:22:39 by rdantzer          #+#    #+#             */
+/*   Updated: 2015/02/18 14:38:39 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long		ft_atol(const char *str)
+static int			ft_strchri(char *str, char c)
 {
-	unsigned long	nb;
-	unsigned long	sign;
+	char			*tmp;
 
-	sign = 0;
-	nb = 0;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
+	tmp = (char *)str;
+	while (*tmp != c)
 	{
-		sign = -1;
-		str++;
+		if (*tmp == '\0')
+			return (-1);
+		tmp++;
 	}
-	else if (*str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-		nb = nb * 10 + (*(str++) - '0');
-	return (nb * sign);
+	return (tmp - str);
+}
+
+long				ft_basetol(const char *str, int base)
+{
+	int				i;
+	long			nb;
+
+	nb = 0;
+	i = -1;
+	while (str[++i] != '\0')
+	{
+		nb *= base;
+		nb += ft_strchri(BASE, str[i]);
+	}
+	return (nb);
 }

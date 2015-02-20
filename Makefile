@@ -6,7 +6,7 @@
 #    By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:45:12 by rdantzer          #+#    #+#              #
-#    Updated: 2015/02/16 23:22:21 by rdantzer         ###   ########.fr        #
+#    Updated: 2015/02/20 04:04:33 by rdantzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,22 +38,23 @@ OBJ= $(SRC_FILES:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	@printf "$(RED)Compiling sources...$(RESET)\t\t"
+	@printf "$(RED)[LIBFT] Compiling sources...$(RESET)\t\t"
 	@$(CC) $(CFLAGS) $(INC) -c $(SRC)
 	@printf "$(GREEN)Done$(RESET)\n"
-	@printf "$(RED)Creating static library...$(RESET)\t"
+	@printf "$(RED)[LIBFT] Creating static library...$(RESET)\t"
 	@$(AR) rcs $(NAME) $(OBJ)
 	@printf "$(GREEN)Done$(RESET)\n"
-	@printf "$(RED)Cleaning directory...$(RESET)\t\t"
+	@printf "$(RED)[LIBFT] Cleaning directory...$(RESET)\t\t"
+	@rm -f $(OBJ)
 	@printf "$(GREEN)Done$(RESET)\n"
 
 clean:
-	@printf "$(RED)Removing objects...$(RESET)\t\t"
+	@printf "$(RED)[LIBFT] Removing objects...$(RESET)\t\t"
 	@rm -f $(OBJ)
 	@printf "$(GREEN)Done$(RESET)\n"
 
 fclean: clean
-	@printf "$(RED)Removing static library...$(RESET)\t"
+	@printf "$(RED)[LIBFT] Removing static library...$(RESET)\t"
 	@rm -f $(NAME)
 	@printf "$(GREEN)Done$(RESET)\n"
 

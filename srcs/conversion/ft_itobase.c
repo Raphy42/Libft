@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/18 14:40:12 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/02/18 15:03:26 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/02/20 04:29:13 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char			*ft_itobase(long nb, int base)
 	char		*base_str;
 
 	base_str = BASE;
-	if (nb == 0 || base == 0)
+	if (nb == 0 || base <= 1)
 		return (ft_strdup("0"));
 	tmp = nb;
 	i = 1;

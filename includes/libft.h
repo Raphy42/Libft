@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/02/20 04:14:56 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/02/26 15:12:29 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,8 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 /*
 **		Bonus functions
 */
+char			**ft_arraydeli(char **array, int i);
+char			**ft_arrayappend(char **array, char *str);
 char			*ft_itobase(long nb, int base);
 double			ft_atod(const char *str);
 int				ft_arraylen(char **array);

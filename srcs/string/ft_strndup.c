@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/12 22:52:06 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/03/12 22:55:02 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/03/12 22:59:02 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 char				*ft_strndup(const char *s, size_t n)
 {
 	char			*result;
-	const size_t	len = ft_strlen(s);
+	size_t			len;
 
+	len = ft_strlen(s);
 	if (n < len)
 		len = n;
 	result = ft_strnew(len);

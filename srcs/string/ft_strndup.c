@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/02 00:13:28 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/02 00:29:24 by rdantzer         ###   ########.fr       */
+/*   Created: 2015/03/12 22:52:06 by rdantzer          #+#    #+#             */
+/*   Updated: 2015/03/12 22:55:02 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char				*ft_strndup(const char *s, size_t n)
 {
-	t_list *map;
-	t_list *add;
-	t_list *tmp;
+	char			*result;
+	const size_t	len = ft_strlen(s);
 
-	if (lst == NULL || f == NULL)
+	if (n < len)
+		len = n;
+	result = ft_strnew(len);
+	if (!result)
 		return (NULL);
-	map = f(lst);
-	tmp = map;
-	lst = lst->next;
-	while (lst != NULL)
-	{
-		add = f(lst);
-		if (add == NULL)
-			return (NULL);
-		tmp->next = add;
-		tmp = add;
-		lst = lst->next;
-	}
-	return (map);
+	return ((char *)ft_memcpy(result, s, len));
 }

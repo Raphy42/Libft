@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/03/12 22:55:21 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/03/22 01:48:15 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ int				ft_strcasecmp(const char *s1, const char *s2);
 int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
 long			ft_basetol(const char *str, int base);
 void			ft_arraydel(char **array);
+char			**ft_arraydup(char **array);
 void			ft_strlower(char *str);
 void			ft_strrev(char *str);
 void			ft_strupper(char *str);

@@ -6,7 +6,7 @@
 #    By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:45:12 by rdantzer          #+#    #+#              #
-#    Updated: 2015/02/20 04:04:33 by rdantzer         ###   ########.fr        #
+#    Updated: 2015/03/22 20:12:19 by rdantzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ CC= gcc
 AR= ar
 
 ## Options
-CFLAGS= -Wall -Werror -Wextra -fdiagnostics-color=always -O3
+CFLAGS= -Wall -Werror -Wextra -fdiagnostics-color=always
 
 ## Aesthetics
 RED= \033[31m

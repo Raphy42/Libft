@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/03/22 02:27:51 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/03/23 06:43:50 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-#ifndef NULL
-# define NULL		((void *)0)
-#endif
+# ifndef NULL
+#  define NULL		((void *)0)
+# endif
 
 typedef unsigned long long t_ull;
 

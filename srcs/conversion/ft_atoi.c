@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 14:23:17 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/01/02 00:32:10 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/03/23 18:59:35 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int						ft_atoi(const char *str)
 	int					negative;
 
 	negative = 1;
+	if (str == NULL)
+		return (0);
 	str = skip_spaces((char *)str);
 	while (*str == '0')
 		str++;

@@ -6,7 +6,7 @@
 #    By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:45:12 by rdantzer          #+#    #+#              #
-#    Updated: 2015/03/22 20:12:19 by rdantzer         ###   ########.fr        #
+#    Updated: 2015/04/27 19:46:27 by rdantzer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME= libft.a
 DIR= srcs
 SRC= $(shell find $(DIR) -type f -print)
 SRC_FILES= $(shell basename -a $(SRC))
-INC= -I./includes
+INC= -I includes
 
 ## Commands
 CC= gcc

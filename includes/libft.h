@@ -6,7 +6,7 @@
 /*   By: rdantzer <rdantzer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:41:44 by rdantzer          #+#    #+#             */
-/*   Updated: 2015/03/23 06:43:50 by rdantzer         ###   ########.fr       */
+/*   Updated: 2015/04/29 22:18:20 by rdantzer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,11 @@ void			ft_strlower(char *str);
 void			ft_strrev(char *str);
 void			ft_strupper(char *str);
 char			*ft_strndup(const char *s, size_t n);
+
+/*
+**		https://github.com/Zoellingam
+**			-used with permission
+*/
+int				ft_fprintf(int fd, char const *format, ...);
 
 #endif
